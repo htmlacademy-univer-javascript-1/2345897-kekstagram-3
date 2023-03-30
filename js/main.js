@@ -9,15 +9,26 @@ function isStringLengthEnough(string, maxLength) {
   return string.length <= maxLength;
 }
 
-const photos = Array.from({length: 25}, (element, i) => ({
-  id: i + 1,
-  url: `photos/${i + 1}.jpg`,
-  description: `Photo${i + 1}`,
-  likes: getRandomPositiveInt(15, 200),
-  comments: getRandomPositiveInt(0, 200)
-}));
+function Photo(id, url, description, likes, comments) {
+  this.id = id;
+  this.url = url;
+  this.description = description;
+  this.likes = likes;
+  this.comments = comments;
+}
 
-// eslint-disable-next-line no-console
-console.log(isStringLengthEnough('1234', 5));
-// eslint-disable-next-line no-console
-console.log(photos[5]);
+const photosArray = [];
+
+function getPhotosArray(number) {
+  for (let i = 0; i < number; i++) {
+    photosArray[i] = new Photo(
+      i + 1,
+      `photos/${i + 1}.jpg`,
+      `Photo${i + 1}`,
+      getRandomPositiveInt(15, 200),
+      getRandomPositiveInt(0, 200)
+    );
+  }
+}
+
+getPhotosArray(25);
