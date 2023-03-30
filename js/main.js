@@ -1,4 +1,4 @@
-function getRandomPositiveInt(min, max) {
+export function getRandomPositiveInt(min, max) {
   if (min >= 0 && min <= max){
     return Math.round(Math.random() * (max - min) + min);
   }
