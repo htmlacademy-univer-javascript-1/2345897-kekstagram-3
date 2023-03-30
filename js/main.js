@@ -8,7 +8,6 @@ function getRandomPositiveInt(min, max) {
 function isStringLengthEnough(string, maxLength) {
   return string.length <= maxLength;
 }
-
 function Photo(id, url, description, likes, comments) {
   this.id = id;
   this.url = url;
