@@ -18,7 +18,6 @@ function Photo(id, url, description, likes, comments) {
 }
 
 const photosArray = [];
-
 function getPhotosArray(number) {
   for (let i = 0; i < number; i++) {
     photosArray[i] = new Photo(
