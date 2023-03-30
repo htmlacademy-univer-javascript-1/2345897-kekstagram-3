@@ -1,4 +1,5 @@
-import {getPhotosArray} from './util.js';
+import {photosArray} from './data.js';
+import {Photo} from './data.js';
 
 function getRandomPositiveInt(min, max) {
   if (min >= 0 && min <= max){
@@ -10,16 +11,8 @@ function getRandomPositiveInt(min, max) {
 function isStringLengthEnough(string, maxLength) {
   return string.length <= maxLength;
 }
-function Photo(id, url, description, likes, comments) {
-  this.id = id;
-  this.url = url;
-  this.description = description;
-  this.likes = likes;
-  this.comments = comments;
-}
 
-const photosArray = [];
-function getPhotosArray(number) {
+export function getPhotosArray(number) {
   for (let i = 0; i < number; i++) {
     photosArray[i] = new Photo(
       i + 1,
@@ -30,5 +23,3 @@ function getPhotosArray(number) {
     );
   }
 }
-
-getPhotosArray(25);
