@@ -8,7 +8,7 @@ function getRandomPositiveInt(min, max) {
   return -1;
 }
 
-function isStringLengthEnough(string, maxLength) {
+export function isStringLengthEnough(string, maxLength) {
   return string.length <= maxLength;
 }
 
