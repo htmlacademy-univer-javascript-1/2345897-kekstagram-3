@@ -1,3 +1,2 @@
-import {getPhotosArray} from './util.js';
-
-getPhotosArray(25);
+import './setup.js';
+import './photo-modal.js';
