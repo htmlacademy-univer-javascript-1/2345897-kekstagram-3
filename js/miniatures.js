@@ -1,4 +1,3 @@
-//Задание 7 часть 2
 const pictures = document.querySelector('.pictures');
 const tempFragment = document.querySelector('#picture').content.querySelector('.picture');
 

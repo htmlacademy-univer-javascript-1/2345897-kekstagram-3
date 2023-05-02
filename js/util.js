@@ -22,4 +22,8 @@ export function getPhotosArray(number) {
       getRandomPositiveInt(0, 200)
     );
   }
+  return photosArray;
 }
+
+export const checkHashtag = (value) => /^(#[a-zA-Zа-яА-ЯЁё0-9\-_]{3,15} *)+$/.test(value);
+export const checkEscapeKey = (evt) => evt.key === 'Escape';
