@@ -1,5 +1,7 @@
 import {checkEscapeKey} from './util.js';
 import {pristine} from './photo-form.js';
+import {setStartScale} from './photo-scale.js';
+
 const imgUploadForm = document.querySelector('.img-upload__form');
 const uploadFileElement = imgUploadForm.querySelector('#upload-file');
 const imgUploadOverlayElement = imgUploadForm.querySelector('.img-upload__overlay');
@@ -18,6 +20,7 @@ const reloadForm = () => {
   if (errorMessage) {
     errorMessage.forEach((element) => { element.style['display'] = 'none'; });
   }
+  setStartScale();
   imgUploadForm.reset();
 };
 
