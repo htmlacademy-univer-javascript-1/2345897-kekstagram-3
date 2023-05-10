@@ -27,3 +27,8 @@ export function getPhotosArray(number) {
 
 export const checkHashtag = (value) => /^(#[a-zA-Zа-яА-ЯЁё0-9\-_]{3,15} *)+$/.test(value);
 export const checkEscapeKey = (evt) => evt.key === 'Escape';
+
+export const findTemplate = (nameOfTemplate, nameOfElementInTemplate) =>
+  document
+    .querySelector(nameOfTemplate)
+    .content.querySelector(nameOfElementInTemplate);
