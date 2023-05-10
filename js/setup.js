@@ -1,6 +1,15 @@
 import {getPhotosArray} from './util.js';
 import {drawPictures} from './miniatures.js';
+import {getData} from './api.js';
+import {showGetDataAlert} from './messages.js';
 
 const numberDescriptions = 25;
-const photoDescriptions = getPhotosArray(numberDescriptions);
-drawPictures(photoDescriptions);
+
+export const drawPhoto = () =>
+  getData(
+    (data) => drawPictures(data.slice(0, numberDescriptions)),
+    () => {
+      showGetDataAlert();
+      drawPictures(getPhotosArray(numberDescriptions));
+    }
+  );
